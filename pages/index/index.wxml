@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='zao-body'>
+    <view class='dp-editarea' bindtap='chooseImage'>
+      <view class="pic-area upload" wx:if="{{!currentImageUrl}}">
+        <image class="priview-image" src='/images/upload.png'></image>
+        <text class="choose-tips">选择图片</text>
+      </view>
+      <view class='pic-area' style="{{priviewImageStyle}}" wx:if="{{currentImageUrl}}">
+        <!-- 预览  -->
+        <image class="priview-image" mode="widthFix" src='{{ currentImageUrl }}'></image>
+      </view>
+    </view>
+    <view class='filter-area' wx:if="{{currentImageUrl}}">
+      <view class="title">添加滤镜</view>
+      <scroll-view scroll-x class="choose-filter">
+        <button class='filter-type' bindtap='chooseFilter' data-filter='原图'>
+          <text class='filter-name'>原图</text>
+        </button>
+
+        <button class='filter-type' bindtap='chooseFilter' data-filter='美肤'>
+          <text class='filter-name'>美肤</text>
+        </button>
+        <button class='filter-type' bindtap='chooseFilter' data-filter='素描'>
+          <text class='filter-name'>素描</text>
+        </button>
+        <button class='filter-type' bindtap='chooseFilter' data-filter='自然增强'>
+          <text class='filter-name'>自然</text>
+        </button>
+        <button class='filter-type' bindtap='chooseFilter' data-filter='紫调'>
+          <text class='filter-name'>紫调</text>
+        </button>
+        <button class='filter-type' bindtap='chooseFilter' data-filter='柔焦'>
+          <text class='filter-name'>柔焦</text>
+        </button>
+
+        <button class='filter-type' bindtap='chooseFilter' data-filter='黑白'>
+          <text class='filter-name'>黑白</text>
+        </button>
+
+        <button class='filter-type' bindtap='chooseFilter' data-filter='仿lomo'>
+
+          <text class='filter-name'>lomo</text>
+        </button>
+        <button class='filter-type' bindtap='chooseFilter' data-filter='暖秋'>
+
+          <text class='filter-name'>暖秋</text>
+        </button>
+        <button class='filter-type' bindtap='chooseFilter' data-filter='木雕'>
+
+          <text class='filter-name'>木雕</text>
+        </button>
+      </scroll-view>
+    </view>
+  </view>
+  <canvas type="2d" id="canvas" class="canvas" style="top: -{{ canvasHeight }}px; left: -{{canvasWidth}}px"></canvas>
+</view>

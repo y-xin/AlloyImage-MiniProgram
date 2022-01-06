@@ -1,0 +1,124 @@
+/* pages/alloyimage/alloyimage.wxss */
+
+.canvas{
+  position: fixed;
+}
+.dp-editarea {
+  width: 100%;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.dp-editarea .da-tips {
+  font-size: 25rpx;
+  color: #777;
+}
+.dp-editarea .pic-area {
+  width: 100%;
+  padding: 0;
+  margin: 20rpx 0;
+  position: relative;
+}
+.dp-editarea .pic-area.upload{
+  height: 380rpx;
+  background: #ccc;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.dp-editarea .pic-area .choose-tips{
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 30rpx;
+  color: #444;
+}
+.dp-editarea .pic-area.upload image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 130rpx;
+}
+
+.dp-editarea .edit {
+  padding: 0rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dp-editarea .edit button {
+  background: #777;
+  color: #fff;
+  padding: 10rpx 18rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+}
+
+.da-orinal-pic {
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.da-filter-pic {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.priview-image {
+  height: 100%;
+  width: 100%;
+}
+
+.filter-area {
+  position: fixed;
+  bottom: 0;
+  height: 200rpx;
+  width: 100%;
+  left: 0;
+  background: #777;
+}
+
+.filter-area .title {
+  color: #fff;
+  font-size: 26rpx;
+  padding: 20rpx;
+}
+
+.choose-filter {
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.choose-filter .filter-type {
+  width:120rpx;
+  height:80rpx;
+  padding: 0;
+  margin-right: 20rpx;
+  text-align:center;
+  line-height:80rpx;
+  display:inline-block;
+  background:#5dc5d0;
+}
+
+.filter-cover {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.filter-name {
+  font-size: 24rpx;
+  /* text-align: center; */
+  color: #fff;
+  /* display: block; */
+}
+
+
